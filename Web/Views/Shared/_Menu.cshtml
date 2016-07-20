@@ -1,0 +1,64 @@
+﻿<!-- Main Header -->
+<header class="main-header">
+    <div class="header-top">
+        <div class="container">
+            <div class="row clearfix">
+                <!--Logo-->
+                <div class="col-md-2 col-sm-3 col-xs-12 logo">
+                    <a href="/home" class="main_logo">
+                        <img src="~/Content/images/logo.png" alt="Sports R Us" title="Sports R Us">
+                    </a>
+                </div>
+
+                <div class="col-md-10 col-sm-12 col-xs-12 header-top-infos pull-right">
+                    <ul class="clearfix">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Partnership</a></li>
+                        <li><a href="#">Suggestions</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <a href="#">@User.Identity.Name</a>
+                                <ul>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="/Members/LogOff">Logout</a></li>
+                                </ul>
+                            </li>
+                        }
+                        else
+                        {
+                            <li><a id="liLoginForm" href="#loginForm">Log in</a></li>
+                        }
+                        <li><button class="search-btn btn btn-red" type="submit"></button></li>
+                    </ul>
+                    <div class="searchFormWrapper">
+                        <form action="#" class="search-form right" id="Searchboxform" method="post" role="form">
+                            <select class="search-input s-grid-3 chosen-sport-select" data-placeholder="Sport.." data-val="true" data-val-required="Select atleast 1 sport you play" id="submittedsportsid" name="SelectedSport">
+                                <option value="1">Cricket</option>
+                                <option value="2">Carrom</option>
+                                <option value="3">Lawn Tennis</option>
+                                <option value="4">FootBall</option>
+                                <option value="5">Squash</option>
+                                <option value="6">Badminton</option>
+                                <option value="7">Swimming</option>
+                                <option value="8">Table Tennis</option>
+                                <option value="9">Track/Field</option>
+                                <option value="10">Golf</option>
+                                <option value="11">Marathon</option>
+                                <option value="12">Personal Instructor</option>
+                                <option value="13">Gymnastics</option>
+                                <option value="14">Karate</option>
+                                <option value="15">Skating</option>
+                                <option value="16">BasketBall</option>
+                            </select>
+                            <input type="submit" value="search" class="pull-left btn searchBtn" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--End Main Header -->

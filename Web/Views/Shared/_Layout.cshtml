@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title :: Sports R Us</title>
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    @Styles.Render("~/Content/css")
+
+    <!-- View specific styles -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="Scripts/others/html5shiv.js"></script>
+        <script src="Scripts/others/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- /#sidebar-wrapper -->
+        <div class="page-wrapper2">
+            @{
+                Html.RenderPartial("~/Views/Shared/_Menu.cshtml");
+                Html.RenderPartial("~/Views/Shared/_MainSlider.cshtml");
+            }
+            @RenderBody()
+
+            @{
+                Html.RenderPartial("~/Views/Shared/_Footer.cshtml");
+                if (User == null || User.Identity == null || !User.Identity.IsAuthenticated)
+                {
+                    Html.RenderPartial("~/Views/Shared/_LoginModel.cshtml");
+                }
+            }
+        </div>
+        <!--End pagewrapper-->
+
+    </div>
+    <!--End wrapper-->
+
+    @Scripts.Render("~/bundles/scripts")
+
+</body>
+</html>

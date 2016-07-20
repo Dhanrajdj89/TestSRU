@@ -1,0 +1,5 @@
+﻿@model SportsRUsApp.Web.ViewModels.ViewMemberDiscussionsViewModel
+@foreach (var topic in Model.Topics)
+{
+    Html.RenderPartial("_TopicSlim", topic);
+}

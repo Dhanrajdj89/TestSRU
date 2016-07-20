@@ -1,0 +1,140 @@
+﻿@using SportsRUsApp.Web.Application.ExtensionMethods
+@model SportsRUsApp.Web.ViewModels.LogOnViewModel
+
+<div id="loginForm" class="showLogin">
+    <div class="formLeft">
+        <span></span>
+    </div>
+    <div class="formRight">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">@Html.LanguageString("Buttons.LogOn")</a>
+            </li>
+            <li role="presentation">
+                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sign Up</a>
+            </li>
+        </ul>
+        <div class="tab-content signUpWrapper">
+            <div role="tabpanel" class="tab-pane active" id="home">
+                <form id="frmLoginUser" class="clearfix" role="form" action="/api/Account/Login" method="post">
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="email">@Html.LabelFor(x => x.Email):</label>
+                        <div class="col-sm-12">
+                            @Html.TextBoxFor(x => x.Email, new { type = "email", @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="pwd">@Html.LabelFor(x => Model.Password):</label>
+                        <div class="col-sm-12">
+                            @Html.PasswordFor(x => Model.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Password)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="col-sm-6 checkRemember">
+                            @using (Html.BeginLabelFor(m => m.RememberMe, new { @class = "checkbox" }))
+                            {
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                            }
+                            @Html.ValidationMessageFor(m => m.RememberMe)
+                        </div>
+                        <div class="col-sm-6">
+                            <button id="btnLoginUser" type="submit" class="btn btn-default blue-btn pull-right">
+                                @Html.LanguageString("Buttons.LogOn")
+                            </button>
+                            @Html.AntiForgeryToken()
+                            @Html.HiddenFor(x => x.ReturnUrl)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix"></div>
+                </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="profile">
+                <form id="frmRegisterUser" class="clearfix" role="form" action="/api/Account/Register" method="post">
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="email">@Html.LabelFor(x => x.Email):</label>
+                        <div class="col-sm-12">
+                            @Html.TextBoxFor(x => x.Email, new { type = "email", @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="email">@Html.LabelFor(x => x.Email):</label>
+                        <div class="col-sm-12">
+                            @Html.TextBoxFor(x => x.Email, new { type = "email", @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Email)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="pwd">@Html.LabelFor(x => Model.Password):</label>
+                        <div class="col-sm-12">
+                            @Html.PasswordFor(x => Model.Password, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Password)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <label class="control-label col-sm-12" for="pwd">@Html.LabelFor(x => Model.ConfirmPassword):</label>
+                        <div class="col-sm-12">
+                            @Html.PasswordFor(x => Model.ConfirmPassword, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.ConfirmPassword)
+                        </div>
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="col-sm-12">
+                            <button id="btnRegisterUser" type="submit" class="btn btn-default blue-btn pull-right">
+                                @Html.LanguageString("Members.Register")
+                            </button>
+                            @Html.HiddenFor(x => x.ReturnUrl)
+                            @Html.AntiForgeryToken()
+                        </div>
+                    </div>
+                    <div class="form-group clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        $('#frmLoginUser').submit(function (e) {
+            e.preventDefault();
+            var frmData = $(this);
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: frmData.attr("action"),
+                data: frmData.serialize(),
+                success: function (data) {
+                    if (data.MessageType == "@((int)SportsRUsApp.Web.Areas.Admin.ViewModels.GenericMessages.success)") {
+                        alert(data.Message);
+                        window.location.reload();
+                    } else alert("Error: " + data.Message);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus + ': ' + errorThrown);
+                }
+            });
+        })
+
+        $('#frmRegisterUser').submit(function () {
+            e.preventDefault();
+            var frmData = $(this);
+            $.ajax({
+                type: 'POST',
+                dataType: 'json',
+                url: frmData.attr("action"),
+                data: frmData.serialize(),
+                success: function (data) {
+                    if (data.MessageType == "@((int)SportsRUsApp.Web.Areas.Admin.ViewModels.GenericMessages.success)") {
+                        alert(data.Message);
+                    } else alert("Error: " + data.Message);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    alert(textStatus + ': ' + errorThrown);
+                }
+            });
+        })
+
+    </script>
+</div>

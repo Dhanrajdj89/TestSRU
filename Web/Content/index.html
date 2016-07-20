@@ -1,0 +1,660 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sports R Us</title>
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/revolution-slider.css" rel="stylesheet" />
+    <link href="css/owl.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/chosen.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- View specific styles -->
+
+    <script src="Scripts/jquery-2.2.2.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="Scripts/others/html5shiv.js"></script>
+        <script src="Scripts/others/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- /#sidebar-wrapper -->
+        <div class="page-wrapper2">
+            <!-- Main Header -->
+            <header class="main-header">
+                <div class="header-top">
+                    <div class="container">
+                        <div class="row clearfix">
+                            <!--Logo-->
+                            <div class="col-md-2 col-sm-3 col-xs-12 logo">
+                                <a href="/home" class="main_logo">
+                                    <img src="images/logo.png" alt="Sports R Us" title="Sports R Us">
+                                </a>
+                            </div>
+
+                            <div class="col-md-10 col-sm-12 col-xs-12 header-top-infos pull-right">
+                                <ul class="clearfix">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Partnership</a></li>
+                                    <li><a href="#">Suggestions</a></li>
+                                    <li><a href="#">Advertise</a></li>
+                                    <li><a id="liLoginForm" href="#loginForm">Log in</a></li>
+                                    <li><button class="search-btn btn btn-red" type="submit"></button></li>
+                                </ul>
+                                <div class="searchFormWrapper">
+                                    <form action="/Home/SendSearch" class="search-form right" id="Searchboxform" method="post" role="form">
+                                        <select class="search-input s-grid-3 chosen-sport-select" data-placeholder="Sport.." data-val="true" data-val-required="Select atleast 1 sport you play" id="submittedsportsid" name="SelectedSport">
+                                            <option value="1">Cricket</option>
+                                            <option value="2">Carrom</option>
+                                            <option value="3">Lawn Tennis</option>
+                                            <option value="4">FootBall</option>
+                                            <option value="5">Squash</option>
+                                            <option value="6">Badminton</option>
+                                            <option value="7">Swimming</option>
+                                            <option value="8">Table Tennis</option>
+                                            <option value="9">Track/Field</option>
+                                            <option value="10">Golf</option>
+                                            <option value="11">Marathon</option>
+                                            <option value="12">Personal Instructor</option>
+                                            <option value="13">Gymnastics</option>
+                                            <option value="14">Karate</option>
+                                            <option value="15">Skating</option>
+                                            <option value="16">BasketBall</option>
+                                        </select>
+                                        <input type="submit" value="search" class="pull-left btn searchBtn" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!--End Main Header -->
+            <!-- Main Slider -->
+            <section class="main-slider">
+                <div class="tp-banner-container">
+                    <div class="tp-banner">
+                        <ul>
+                            <!-- Slide 01 -->
+                            <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-1.jpg" data-saveperformance="off" data-title="Next">
+                                <img src="images/main-slider/image-1.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption lfl tp-resizeme"
+                                     data-x="30" data-hoffset="0"
+                                     data-y="60" data-voffset="-50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="img-title">
+                                        <img src="images/main-slider/banner_man_01.png" data-bgrepeat="no-repeat">
+                                    </div>
+                                </div>
+                                <div class="tp-caption lfr tp-resizeme"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="200" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="white-title">
+                                        <h2>I live AND breathe CRICKET.<br />Looking to play some good<br />COMPETITIVE SPORT</h2>
+                                    </div>
+                                </div>
+                                <div class="tp-caption lfr tp-resizeme banner_bottom_bx"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="400" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="bott_bx bg_green">
+                                        <h3>Search And Book</h3>
+                                        <h4>A Sports Arena</h4>
+                                    </div>
+                                    <div class="bott_bx bg_yellow">
+                                        <h3>Register</h3>
+                                        <h4>And Play Your League</h4>
+                                    </div>
+                                    <div class="bott_bx bg_purple">
+                                        <h3>Search For</h3>
+                                        <h4>Competitive Play</h4>
+                                    </div>
+                                    <div class="bott_bx bg_blue">
+                                        <h3>Local & </h3>
+                                        <h4>National Reach</h4>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- Slide 02 -->
+                            <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-2.jpg" data-saveperformance="off" data-title="Next">
+                                <img src="images/main-slider/image-2.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption lfl tp-resizeme"
+                                     data-x="30" data-hoffset="0"
+                                     data-y="60" data-voffset="-50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="img-title">
+                                        <img src="images/main-slider/banner_man_02.png" data-bgrepeat="no-repeat">
+                                    </div>
+                                </div>
+                                <div class="tp-caption lfr tp-resizeme"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="200" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="white-title">
+                                        <h2> I am a SOCCER MOM. <br />I want to get my daughter<br />COACHED BY THE EXPERTS</h2>
+                                    </div>
+                                </div>
+                                <div class="tp-caption lfr tp-resizeme banner_bottom_bx"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="400" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                                    <div class="bott_bx bg_green">
+                                        <h3>Local</h3>
+                                        <h4>Coaches</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_yellow">
+                                        <h3>Certified</h3>
+                                        <h4>Professionals</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_purple">
+                                        <h3>Predefined</h3>
+                                        <h4>Packages</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_blue">
+                                        <h3>Beginner</h3>
+                                        <h4>Expert Level</h4>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <!-- Slide 03 -->
+                            <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="images/main-slider/image-3.jpg" data-saveperformance="off" data-title="Next">
+                                <img src="images/main-slider/image-3.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                <div class="tp-caption lfl tp-resizeme"
+                                     data-x="200" data-hoffset="0"
+                                     data-y="100" data-voffset="-50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><div class="img-title"><img src="images/main-slider/banner_man_03.png" data-bgrepeat="no-repeat"></div></div>
+                                <div class="tp-caption lfr tp-resizeme"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="200" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+                                    <div class="white-title">
+                                        <h2>I Am A Golf Coach.<br />I Will be Happy To Coach You<br />And Improve Your Game</h2>
+                                    </div>
+
+                                </div>
+                                <div class="tp-caption lfr tp-resizeme banner_bottom_bx"
+                                     data-x="600" data-hoffset="0"
+                                     data-y="400" data-voffset="50"
+                                     data-speed="1500"
+                                     data-start="500"
+                                     data-easing="easeOutExpo"
+                                     data-splitin="none"
+                                     data-splitout="none"
+                                     data-elementdelay="0.01"
+                                     data-endelementdelay="0.3"
+                                     data-endspeed="1200"
+                                     data-endeasing="Power4.easeIn"
+                                     style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;">
+
+                                    <div class="bott_bx bg_green">
+                                        <h3>National</h3>
+                                        <h4>Reach Of Students</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_yellow">
+                                        <h3>Referee</h3>
+                                        <h4>For A Game</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_purple">
+                                        <h3>Secure</h3>
+                                        <h4>Payments</h4>
+                                    </div>
+
+                                    <div class="bott_bx bg_blue">
+                                        <h3>Unlimited</h3>
+                                        <h4>Network</h4>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--<div class="tp-bannertimer"></div>-->
+                        <div class="bottom_go_arrow"> <span><img src="images/down_arrow.png" style="margin-top:8px;" alt="Image"></span> </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Mission Box -->
+            <!-- Mission Box -->
+            <section class="mission-section column-view">
+                <div class="auto-container">
+                    <div class="sec-title">
+                        <h3>Our mission is to be a one-stop solution for <br /> "your sporting needs"</h3>
+                    </div>
+                    <div class="row clearfix">
+                        <!-- Art 01 -->
+                        <article class="mission_box column-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1000ms">
+                            <div class="inner-box">
+                                <figure class="image">
+                                    <a href="#"><img src="images/mission_img_01.jpg" alt="Image" title="Featured Service"></a>
+                                    <a href="#" class="theme-btn dark-btn">Read More</a>
+                                </figure>
+                                <div class="overlay-box">
+                                    <h3>Play a Sport</h3>
+                                    <div class="text">
+                                        <p>Finding a buddy to play with can be a difficult or impossible task, let us help you connect to your BEST CHOICE on buddies to play with and the arena's to plat at.</p>
+                                    </div>
+                                </div>
+                                <div class="post-content clearfix">
+                                    <h3>Play a Sport</h3>
+                                    <div class="text-center">
+                                        <a href="#">Find an Arena/Playground Find a Buddy</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Art 01 -->
+                        <!-- Art 02 -->
+                        <article class="mission_box column-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1000ms">
+                            <div class="inner-box">
+                                <figure class="image">
+                                    <a href="#"><img src="images/mission_img_02.jpg" alt="Image" title="Featured Service"></a>
+                                    <a href="#" class="theme-btn dark-btn">Read More</a>
+                                </figure>
+                                <div class="post-content clearfix">
+                                    <h3>I want Coaching</h3>
+                                    <div class="text-center">
+                                        <a href="#">Coaching by The Experts Search and Book a Coach</a>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <h3>I want Coaching</h3>
+                                    <div class="text">
+                                        <p>Sports coaches help individuals achieve their full sporting potential. Our coaches are qualified to get you to your desired goals AND BEYOND.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Art 02 -->
+                        <!-- Art 03 -->
+                        <article class="mission_box column-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1000ms">
+                            <div class="inner-box">
+                                <figure class="image">
+                                    <a href="#"><img src="images/mission_img_03.jpg" alt="Image" title="Featured Service"></a>
+                                    <a href="#" class="theme-btn dark-btn">Read More</a>
+                                </figure>
+                                <div class="post-content clearfix">
+                                    <h3>I want to Coach </h3>
+                                    <div class="text-center">
+                                        <a href="#">Register As a Coach Register As a Referee</a>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <h3>I want to Coach </h3>
+                                    <div class="text">
+                                        <p>Register with us if you LOVE SPORTS and want to help people perform at their highest level, Join our nationwide team and unleash your ultimate career options. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Art 03 -->
+                        <!-- Art 04 -->
+                        <article class="mission_box column-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1000ms">
+                            <div class="inner-box">
+                                <figure class="image">
+                                    <a href="#"><img src="images/mission_img_04.jpg" alt="Image" title="Featured Service"></a>
+                                    <a href="#" class="theme-btn dark-btn">Read More</a>
+                                </figure>
+                                <div class="post-content clearfix">
+                                    <h3>Register a Sports Arena</h3>
+                                    <div class="text-center">
+                                        <a href="#">Register My Arena</a>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <h3>Register a Sports Arena</h3>
+                                    <div class="text">
+                                        <p>The Nation's best sporting arena's come in contact with their real users here. Help your playground/arena GET NOTICED to achieve their best potential.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Art 04 -->
+                        <!-- Art 05 -->
+                        <article class="mission_box column-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1000ms">
+                            <div class="inner-box">
+                                <figure class="image">
+                                    <a href="#"><img src="images/mission_img_05.jpg" alt="Image" title="Featured Service"></a>
+                                    <a href="#" class="theme-btn dark-btn">Read More</a>
+                                </figure>
+                                <div class="post-content clearfix">
+                                    <h3>Play Tournaments</h3>
+                                    <div class="text-center">
+                                        <a href="#">Register My League play Tournaments</a>
+                                    </div>
+                                </div>
+                                <div class="overlay-box">
+                                    <h3>Play Tournaments</h3>
+                                    <div class="text">
+                                        <p>Instead of waiting for friends to get online, enable your team to be searched by millions others who are keen to play like you, easily enable your team to play against people nation wide.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Art 05 -->
+                    </div>
+                </div>
+            </section>
+            <section class="slider_second">
+                <img src="images/slider_second_bg.jpg">
+            </section>
+            <!-- Second Slider -->
+            <!-- Testimonial Slider -->
+            <section class="testimonials_sec ">
+                <div class="container">
+                    <div class="sec-title">
+                        <h3>"what our clients say about us"</h3>
+                    </div>
+                    <div class="testimonial_slider">
+                        <div class="testimonial_bx">
+                            <div class="profile_bx">
+                                <img src="images/client_profile_01.jpg" alt="Image">
+                                <h3>Jitendra Mhatre</h3>
+                                <span>
+                                    (Head Coach) <br />
+                                    Varchasva Sports, Navi Mumbai
+                                </span>
+                            </div>
+                            <div class="testi_bx">
+                                <p class="testimonial_txt">This is a great platform for the every-day sportsman. I am very exited to see this site help individuals in their daily sporting life. This surely is a win-win for all.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial_bx">
+                            <div class="profile_bx">
+                                <img src="images/client_profile_02.jpg" alt="Image">
+                                <h3>Sonali Sancheti </h3>
+                                <span>(Soccer Mom) <br />Indore<br /></span>
+                            </div>
+                            <div class="testi_bx">
+                                <p class="testimonial_txt">I found this integrated platform very easy to use and precise for what I was looking for. Sporting families will immensely benefit from this.</p>
+                            </div>
+                        </div>
+                        <div class="testimonial_bx">
+                            <div class="profile_bx">
+                                <img src="images/client_profile_01.jpg" alt="Image">
+                                <h3>Sonali Sancheti </h3>
+                                <span>(Soccer Mom) <br />Indore<br /></span>
+                            </div>
+                            <div class="testi_bx">
+                                <p class="testimonial_txt">I found this integrated platform very easy to use and precise for what I was looking for. Sporting families will immensely benefit from this.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Testimonial Slider -->
+            <section class="newsletter_sec">
+                <div class="container">
+                    <div class="col-md-8 col-sm-6 col-xs-12"><span>Stay updated :</span> Sign up if you would like to receive the newest updates and other free goods.</div>
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <form method="post" action="#" class="newsletter-form right">
+                            <fieldset>
+                                <input type="text" id="txtEmailId" class="search-input s-grid-3" value="" placeholder="Your email address" name="txtEmailId">
+                                <button id="btnNewsletter" class="search-btn btn btn-red" type="button">
+                                    Submit
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <script type="text/javascript">
+                $(function () {
+                    $('#btnNewsletter').click(function (e) {
+                        e.preventDefault();
+                        abp.ui.setBusy(
+                            $('.newsletter_sec'),
+                            abp.ajax({
+                                url: abp.appPath + 'Home/Newsletter',
+                                type: 'POST',
+                                data: JSON.stringify({
+                                    email: $('#txtEmailId').val(),
+                                    isSubscribed: true
+                                }),
+                                success: function (response) {
+                                    if (response != null && response.success) {
+                                        alert(response.responseText);
+                                    } else {
+                                        alert(response.responseText);
+                                    }
+                                },
+                                error: function (response) {
+                                    alert("error!");  //
+                                }
+                            })
+                        );
+                    });
+                });
+            </script>
+            <!-- Subfooter Box -->
+            <section class="subfooter_sec">
+                <div class="container">
+                    <div class="row">
+                        <div class="subfooter_col col-md-3 col-sm-6">
+                            <p><img src="images/footer_logo.png" style="margin-top:20px;" alt="Image"></p>
+                        </div>
+                        <div class="subfooter_col col-md-3 col-sm-6">
+                            <h2>Help and Support</h2>
+                            <ul>
+                                <li><a href="#">Have a Suggestion</a></li>
+                                <li><a href="#">Partnership</a></li>
+                                <li><a href="#">Advertise</a></li>
+                            </ul>
+                        </div>
+                        <div class="subfooter_col col-md-3 col-sm-6">
+                            <h2>Follow Us</h2>
+                            <ul class="social">
+                                <li><a href="#" class="fa fb"><img src="images/1px.gif" class="px1" alt=""></a> Facebook</li>
+                                <li><a href="#" class="fa tw"><img src="images/1px.gif" class="px1" alt=""></a> Twitter</li>
+                                <li><a href="#" class="fa gplus"><img src="images/1px.gif" class="px1" alt=""></a> Google+</li>
+                            </ul>
+                        </div>
+                        <div class="subfooter_col col-md-3 col-sm-6">
+                            <h2>About Us</h2>
+                            <p>We are a team of sports enthusiasts who believe that enabling better sporting opportunities is the best way to build a healthier community for the future</p>
+                            <p>Email : <a href="mailto:admin@sportsrus.in">admin@sportsrus.in</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Subfooter Box End -->
+            <footer class="footer">
+                <div class="footer-meta">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <div class="copyright">All rights reserved. Copyright &copy; 2016 Sports R Us</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!--End pagewrapper-->
+
+        <div id="loginForm" class="showLogin">
+            <div class="formLeft">
+                <span></span>
+            </div>
+            <div class="formRight">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Log In</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Sign Up</a>
+                    </li>
+                </ul>
+                <div class="tab-content signUpWrapper">
+                    <div role="tabpanel" class="tab-pane active" id="home">
+                        <form class="clearfix" role="form">
+                            <div class="form-group clearfix">
+                                <label class="control-label col-sm-12" for="email">Email:</label>
+                                <div class="col-sm-12">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-sm-12" for="pwd">Password:</label>
+                                <div class="col-sm-12">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="col-sm-6 checkRemember">
+                                    <div class="pull-left">
+                                        <label><input type="checkbox"> Remember me</label>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-default blue-btn pull-right">Log In</button>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix"></div>
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="profile">
+                        <form class="clearfix" role="form">
+                            <div class="form-group clearfix">
+                                <label class="control-label col-sm-12" for="email">Email:</label>
+                                <div class="col-sm-12">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-sm-12" for="pwd">Password:</label>
+                                <div class="col-sm-12">
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-sm-12" for="pwd">Confirm Password:</label>
+                                <div class="col-sm-12">
+                                    <input type="password" class="form-control" id="cnfrm_pwd" placeholder="Confirm password">
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <div class="col-sm-12">
+                                    <button type="submit" class="btn btn-default blue-btn pull-right">Sign Up</button>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End wrapper-->
+    <!--Scroll to top-->
+    <script src="Scripts/jquery-ui-1.11.4.js"></script>
+    <script src="Scripts/toastr.js"></script>
+    <script src="Scripts/sweetalert/sweet-alert.js"></script>
+    <script src="Scripts/others/spinjs/spin.js"></script>
+    <script src="Scripts/others/spinjs/jquery.spin.js"></script>
+
+    <script src="js/revolution.min.js"></script>
+    <script src="js/bxslider.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.fancybox.pack.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
